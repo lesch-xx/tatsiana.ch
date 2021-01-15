@@ -1,5 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Ignore directories
+/_site/
+/.sass-cache/
+/.jekyll-cache/
+/vendor/
+
+# Ignore files
+/.jekyll-metadata
 .DS_Store

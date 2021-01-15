@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=“utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rouge+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=La+Belle+Aurore">
+    <title>Tatsiana Siliuk - стилист-парикмахер в Цюрихе,Швейцария.</title>
+    <style>
+
+    @font-face {
+      font-family: "DrCarbfred";
+      src: url("DrCarbfred.ttf");
+      }
+
+    @font-face {
+      font-family: "NovatnyBold";
+      src: url("fonts/NovatnyBold.woff2");
+     }
+
+      body {
+          background-image: none;
+          background-color:  white;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          margin: 16px 0 0;
+          min-width: 375px;
+
+        }
+        header,
+        nav,
+        main,
+        footer {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        header {
+          font-size: 20px;
+          display: flex;
+          justify-content: center;
+          text-decoration: none;
+          font-family: arial;
+          padding-bottom: 5px;
+          flex-wrap: wrap;
+        }
+
+        nav {
+        }
+
+        main {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        a {
+          color: #808080;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: black;
+        }
+
+        nav ul {
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+          flex-wrap: wrap;
+          padding: 0 10px;
+          margin: 0;
+          text-align: center;
+          font-size: 19px;
+          font-family: "NovatnyBold", serif;
+          font-variant: small-caps;
+        }
+
+        nav ul li {
+          display: inline-block;
+          padding: 5px 10px;
+          min-width: 120px;
+        }
+
+        nav ul li:hover {
+          background-color: transparent;
+          border-style: none;
+        }
+
+        nav ul li a {
+          color: black;
+        }
+
+        nav ul li:hover a {
+          color: #808080;
+        }
+
+        footer p {
+          color: white;
+          font-family: "NovatnyBold", serif;
+          font-variant: small-caps;
+          font-size: 12px;
+        }
+
+        footer {
+          text-align: center;
+        }
+
+        footer span {
+          font-family: "IM Fell French Canon SC", serif;
+        }
+
+        main p {
+          text-align: center;
+          font-size: 60px;
+          font-family: "Rouge Script", cursive;
+          padding: 120px;
+        }
+        .fa {
+          padding: 10px;
+          font-size: 20px;
+          width: 20px;
+          text-align: center;
+          border-radius: 100%;
+          background: transparent;
+          color: black;
+        }
+
+        .fa:hover {
+          opacity: 0.7;
+        }
+
+        .logo{
+          display: inline-block;
+          height: 98.7px;
+          width: 300px;
+        }
+
+        .text {
+          display: block;
+          font-family: "Rouge Script", cursive;
+          text-align: center;
+          font-size: 35px;
+          color: black;
+          min-width: 300px;
+          margin: 0;
+        }
+
+        .footer {
+          padding: 20px 0;
+          background-color: black;
+        }
+
+        .fsocial .fa {
+          color: white;
+          padding-top: 0;
+        }
+
+        .column {
+          width: 30%;
+          padding: 10px 10px;
+        }
+        .column img {
+          width: 100%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .row {
+          display: flex;
+        	flex-wrap: wrap;
+        	justify-content: space-around;
+        }
+
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          background-color: black;
+        }
+
+        .modal.show {
+          display: flex;
+        }
+
+        .modal .content {
+          flex-grow: auto;
+          display: flex;
+          align-items: center;
+        }
+
+        .modal .content .slide {
+          display: none;
+          margin: 20px 0;
+          width: 100%;
+          height: 100%; /* TODO: fix height */
+          max-width: 750px;
+          max-height: 750px;
+        }
+
+        .modal .content .slide.show {
+          display: block;
+        }
+
+        .closeButton {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 16px;
+          font-size: 30px;
+          font-weight: bold;
+        }
+
+        .closeButton:hover,
+        .closeButton:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .cursor {
+          cursor: pointer;
+        }
+
+        .prevButton,
+        .nextButton {
+          cursor: pointer;
+          color: white;
+          padding: 100% 10px;
+          font-weight: bold;
+          font-size: 30px;
+          user-select: none;
+          box-sizing: content-box;
+          flex-grow: 1;
+        }
+
+        .prevButton {
+          text-align: right;
+        }
+
+        .prevButton:hover,
+        .nextButton:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #999;
+        }
+
+        img {
+          margin-bottom: -4px;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+          box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/TSsignatures.jpg" class="logo">
+      <div class="text">
+        <a href="tel:41798562939">Call to book your appointment now</a> or
+        <a href="mailto:tatsiana.silliuk@gmail.com">contact by email</a> or via social
+        <div class="social">
+        <a href="https://wa.me/41798562939" target="_blank" class="fa fa-whatsapp"></a>
+        <a href="https://www.instagram.com/tatsiana.siliuk" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/tatsiana.siliuk.9" target="_blank" class="fa fa-facebook"></a>
+        </div>
+       </div>
+     </header>
+     <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+     </nav>
+     <main>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/1s.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/2s.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/3s.png" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/4s.png" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/5s.png" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/6s.png" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/7s.png" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/8s.png" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/9s.png" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/10s.png" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/11s.png" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/12s.png" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/13s.png" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/14s.png" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/15s.png" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/16s.png" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/17s.png" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/18s.png" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/gallery/small/19s.png" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/20s.png" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/gallery/small/21s.png" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+        </div>
+      </div>
+
+      <div id="modal" class="modal">
+        <span class="closeButton cursor" onclick="closeModal()">&times;</span>
+        <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="content">
+          <img class="slide" src="img/gallery/large/1l.png">
+          <img class="slide" src="img/gallery/large/2l.png">
+          <img class="slide" src="img/gallery/large/3l.png">
+          <img class="slide" src="img/gallery/large/4l.png">
+          <img class="slide" src="img/gallery/large/5l.png">
+          <img class="slide" src="img/gallery/large/6l.png">
+          <img class="slide" src="img/gallery/large/7l.png">
+          <img class="slide" src="img/gallery/large/8l.png">
+          <img class="slide" src="img/gallery/large/9l.png">
+          <img class="slide" src="img/gallery/large/10l.png">
+          <img class="slide" src="img/gallery/large/11l.png">
+          <img class="slide" src="img/gallery/large/12l.png">
+          <img class="slide" src="img/gallery/large/13l.png">
+          <img class="slide" src="img/gallery/large/14l.png">
+          <img class="slide" src="img/gallery/large/15l.png">
+          <img class="slide" src="img/gallery/large/16l.png">
+          <img class="slide" src="img/gallery/large/17l.png">
+          <img class="slide" src="img/gallery/large/18l.png">
+          <img class="slide" src="img/gallery/large/19l.png">
+          <img class="slide" src="img/gallery/large/20l.png">
+          <img class="slide" src="img/gallery/large/21l.png">
+        </div>
+        <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <script>
+        const slides = document.getElementsByClassName("slide");
+
+        function openModal() {
+          document.getElementById("modal").classList.add("show");
+        }
+
+        function closeModal() {
+          document.getElementById("modal").classList.remove("show");
+        }
+
+        var slideIndex = 1;
+
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+
+          for (let i = 0; i < slides.length; i++) {
+              slides[i].classList.remove("show");
+          }
+
+          slides[slideIndex - 1].classList.add("show");
+        }
+      </script>
+    </main>
+    <div class="footer">
+      <footer>
+        <p><span>&copy;</span> 2021 Tatsiana Siliuk Hairstylist</p>
+        <div class="fsocial">
+          <a href="https://wa.me/41798562939" target="_blank" class="fa fa-whatsapp"></a>
+          <a href="https://www.instagram.com/tatsiana.siliuk" target="_blank" class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/tatsiana.siliuk.9" target="_blank" class="fa fa-facebook"></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

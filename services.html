@@ -1,295 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-      <head>
-        <meta charset=“utf-8”>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rouge+Script">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=La+Belle+Aurore">
-        <title>Tatsiana Siliuk - стилист-парикмахер в Цюрихе,Швейцария.</title>
-        <style>
+---
+layout: default
+title: Tatsiana Siliuk - стилист-парикмахер в Цюрихе,Швейцария
+---
+<style>
+p{
+  text-align: center;
+  font-family: "IM Fell French Canon SC", serif;
+}
 
-        @font-face {
-          font-family: "DrCarbfred";
-          src: url("DrCarbfred.ttf");
-          }
+table {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+}
 
-        @font-face {
-          font-family: "NovatnyBold";
-          src: url("fonts/NovatnyBold.woff2");
-         }
+th,
+td {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 800px;
+}
 
-         body {
-            background-image: none;
-            background-color:  white;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            margin: 16px 0 0;
-            height: 100%;
-          }
-
-          html {
-            height: 100%;
-          }
-
-          header,
-          nav,
-          main,
-          footer {
-            max-width: 800px;
-            margin: 0 auto;
-          }
-
-          header {
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            text-decoration: none;
-            font-family: arial;
-            padding-bottom: 5px;
-            flex-wrap: wrap;
-          }
-
-          nav {
-          }
-
-          main {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-          }
-
-          a {
-            color: #808080;
-            text-decoration: none;
-          }
-
-          a:hover {
-            color: black;
-          }
-
-          nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            flex-wrap: wrap;
-            padding: 0 10px;
-            margin: 0;
-            text-align: center;
-            font-size: 19px;
-            font-family: "NovatnyBold", serif;
-            font-variant: small-caps;
-          }
-
-          nav ul li {
-            display: inline-block;
-            padding: 5px 10px;
-            min-width: 120px;
-          }
-
-          nav ul li:hover {
-            background-color: transparent;
-            border-style: none;
-          }
-
-          nav ul li a {
-            color: black;
-          }
-
-          nav ul li:hover a {
-            color: #808080;
-          }
-
-          footer p {
-            color: white;
-            font-family: "NovatnyBold", serif;
-            font-variant: small-caps;
-            font-size: 12px;
-          }
-
-          footer {
-            text-align: center;
-          }
-
-          footer span {
-            font-family: "IM Fell French Canon SC", serif;
-          }
-
-          .fa {
-            padding: 10px;
-            font-size: 20px;
-            width: 20px;
-            text-align: center;
-            border-radius: 100%;
-            background: transparent;
-            color: black;
-          }
-
-          .fa:hover {
-            opacity: 0.7;
-          }
-
-          .logo{
-            display: inline-block;
-            height: 98.7px;
-            width: 300px;
-          }
-
-          .images {
-            display: flex;
-	          justify-content: center;
-	          align-items: center;
-	          align-content: stretch;
-          }
-
-          .responsive {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-
-          }
-
-          .text {
-            display: block;
-            font-family: "Rouge Script", cursive;
-            text-align: center;
-            font-size: 35px;
-            color: black;
-            min-width: 300px;
-            margin: 0;
-          }
-
-          .footer {
-            padding: 20px 0;
-            background-color: black;
-          }
-
-          .fsocial .fa {
-            color: white;
-            padding-top: 0;
-          }
-
-          p{
-            text-align: center;
-            font-family: "IM Fell French Canon SC", serif;
-          }
-          table {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            border-collapse: collapse;
-          }
-
-          th,
-          td {
-              padding: 15px;
-              font-size: 18px;
-              text-align: center;
-              border-bottom: 1px solid #ddd;
-              border-collapse: collapse;
-              width: 800px;
-          }
-          tr:nth-child(even){
-            background-color: #f2f2f2
-          }
-
-    </style>
-  </head>
-  <body>
-        <header>
-          <img src="img/TSsignatures.jpg" class="logo">
-          <div class="text">
-            <a href="tel:41798562939">Call to book your appointment now</a> or
-            <a href="mailto:tatsiana.silliuk@gmail.com">contact by email</a> or via social
-            <div class="social">
-              <a href="https://wa.me/41798562939" target="_blank" class="fa fa-whatsapp"></a>
-              <a href="https://www.instagram.com/tatsiana.siliuk" target="_blank" class="fa fa-instagram"></a>
-              <a href="https://www.facebook.com/tatsiana.siliuk.9" target="_blank" class="fa fa-facebook"></a>
-            </div>
-          </div>
-        </header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-          </ul>
-        </nav>
-        <main>
-          <div style="overflow-x:auto;">
-            <table>
-              <tr>
-                <th></th>
-                <th>Short Hair</th>
-                <th>Medium Hair</th>
-                <th>Long Hair</th>
-              </tr>
-            <tr>
-              <td>Ladies Cut / Blow-dry</td>
-              <td>70.-</td>
-              <td>95.-</td>
-              <td>120.-</td>
-            </tr>
-            <tr>
-              <td>Brushing</td>
-              <td>45.-</td>
-              <td>55.-</td>
-              <td>65.-</td>
-            </tr>
-            <tr>
-              <td>Color Refresh</td>
-              <td>85.-</td>
-              <td>105.-</td>
-              <td>125.-</td>
-            </tr>
-            <tr>
-              <td>Tint</td>
-              <td>60.-</td>
-              <td>75.-</td>
-              <td>90.-</td>
-            </tr>
-            <tr>
-              <td>Balayage, Highlights,<br>
-                Shatush</td>
-              <td>150.-</td>
-              <td>200.-</td>
-              <td>250.-</td>
-            </tr>
-            <tr>
-              <td>Wedding Hair</td>
-              <td colspan="3">from 250.-</td>
-            </tr>
-            <tr>
-              <td>Occasional Hair</td>
-              <td colspan="3">from 200.-</td>
-            </tr>
-            <tr>
-              <td>Men’s Cut</td>
-              <td colspan="3">60.-</td>
-            </tr>
-            <tr>
-              <td>Olaplex Treatment</td>
-              <td>from 25.-</td>
-              <td>from 35.-</td>
-              <td>from 45.-</td>
-            </tr>
-           </table>
-         </div>
-           <p>All prices are in Swiss francs.</p>
-             </main>
-          <br>
-           <div class="footer">
-             <footer>
-               <p><span>&copy;</span> 2021 Tatsiana Siliuk Hairstylist</p>
-               <div class="fsocial">
-                 <a href="https://wa.me/41798562939" target="_blank" class="fa fa-whatsapp"></a>
-                 <a href="https://www.instagram.com/tatsiana.siliuk" target="_blank" class="fa fa-instagram"></a>
-                 <a href="https://www.facebook.com/tatsiana.siliuk.9" target="_blank" class="fa fa-facebook"></a>
-               </div>
-             </footer>
-           </div>
-  </body>
-</html>
+tr:nth-child(even){
+  background-color: #f2f2f2
+}
+</style>
+<div style="overflow-x:auto;">
+<table>
+  <tr>
+    <th></th>
+    <th>Short Hair</th>
+    <th>Medium Hair</th>
+    <th>Long Hair</th>
+  </tr>
+  <tr>
+    <td>Ladies Cut / Blow-dry</td>
+    <td>70.-</td>
+    <td>95.-</td>
+    <td>120.-</td>
+  </tr>
+  <tr>
+    <td>Brushing</td>
+    <td>45.-</td>
+    <td>55.-</td>
+    <td>65.-</td>
+  </tr>
+  <tr>
+    <td>Color Refresh</td>
+    <td>85.-</td>
+    <td>105.-</td>
+    <td>125.-</td>
+  </tr>
+  <tr>
+    <td>Tint</td>
+    <td>60.-</td>
+    <td>75.-</td>
+    <td>90.-</td>
+  </tr>
+  <tr>
+    <td>Balayage, Highlights,<br>
+      Shatush</td>
+    <td>150.-</td>
+    <td>200.-</td>
+    <td>250.-</td>
+  </tr>
+  <tr>
+    <td>Wedding Hair</td>
+    <td colspan="3">from 250.-</td>
+  </tr>
+  <tr>
+    <td>Occasional Hair</td>
+    <td colspan="3">from 200.-</td>
+  </tr>
+  <tr>
+    <td>Men’s Cut</td>
+    <td colspan="3">60.-</td>
+  </tr>
+  <tr>
+    <td>Olaplex Treatment</td>
+    <td>from 25.-</td>
+    <td>from 35.-</td>
+    <td>from 45.-</td>
+  </tr>
+</table>
+</div>
+<p>All prices are in Swiss francs.</p>

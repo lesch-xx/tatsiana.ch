@@ -15,12 +15,12 @@
     <style>
       @font-face {
         font-family: "DrCarbfred";
-        src: url("/fonts/DrCarbfred.ttf");
+        src: url("{{ site.baseurl }}/fonts/DrCarbfred.ttf");
       }
 
       @font-face {
         font-family: "NovatnyBold";
-        src: url("/fonts/NovatnyBold.woff2") format("woff2");
+        src: url("{{ site.baseurl }}/fonts/NovatnyBold.woff2") format("woff2");
       }
 
       body {
@@ -156,7 +156,7 @@
   </head>
   <body>
     <header>
-      <img src="img/TSsignatures.jpg" class="logo">
+      <img src="{{ site.baseurl }}/img/TSsignatures.jpg" class="logo">
       <div class="text">
         <a href="tel:41798562939">Call to book your appointment now</a> or
         <a href="mailto:tatsiana.silliuk@gmail.com">contact by email</a> or via social
@@ -169,11 +169,11 @@
     </header>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/about">About</a></li>
+        <li><a href="{{ site.baseurl }}/services">Services</a></li>
+        <li><a href="{{ site.baseurl }}/gallery">Gallery</a></li>
+        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
       </ul>
     </nav>
     <main>

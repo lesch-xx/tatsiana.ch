@@ -1,71 +1,101 @@
+@font-face {
+  font-family: "DrCarbfred";
+  src: url("/fonts/DrCarbfred.ttf");
+}
+
+@font-face {
+  font-family: "NovatnyBold";
+  src: url("/fonts/NovatnyBold.woff2") format("woff2");
+}
+
 body {
   background-image: none;
   background-color:  white;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin: 0;
+  margin: 16px 0 0;
 }
 
-h3 {
-  font-size: 22px;
-  text-align: center;
-  background-color: transparent;
+header,
+nav,
+main,
+footer {
+  max-width: 800px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+header {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
-  font-weight: normal;
-  font-family: helvetica;
-  margin:20px;
+  font-family: arial;
+  padding-bottom: 5px;
+  flex-wrap: wrap;
 }
 
-nav {
-  font-size: 22px;
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-family: helvetica;
+main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 a {
-  color: black;
-  background-color: transparent;
+  color: #808080;
   text-decoration: none;
 }
 
 a:hover {
-  color: #D3D6CF;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 19px;
+  color: black;
+  font-family: "NovatnyBold", serif;
+  font-variant: small-caps;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  min-width: 120px;
+}
+
+nav ul li:hover {
   background-color: transparent;
-  text-decoration: none;
   border-style: none;
 }
 
-ul {
-  padding: 0px;
+nav ul li a {
+  color: black;
 }
 
-li {
-  display: inline;
-  padding: 5px 5px;
-}
-
-li:hover{
-  background-color: transparent;
-  border-style: none;
-  opacity: 0.6;
+nav ul li:hover a {
+  color: #808080;
 }
 
 footer p {
-  text-align: center;
-  padding: 3px;
-  background-color: transparent;
   color: white;
-  font-weight: none;
-  font-family: courier;
+  font-family: "NovatnyBold", serif;
+  font-variant: small-caps;
+  font-size: 12px;
+}
+
+footer span {
+  font-family: "IM Fell French Canon SC", serif;
 }
 
 footer {
   text-align: center;
-  background-color: black;
-  background-size: 100%;
-  padding-top: 2px;
 }
 
 .fa {
@@ -73,36 +103,37 @@ footer {
   font-size: 20px;
   width: 20px;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 100%;
+  background: transparent;
+  color: black;
 }
 
 .fa:hover {
   opacity: 0.7;
 }
 
-.fa-instagram {
-  background: transparent;
+.logo {
+  display: inline-block;
+  height: 99px;
+  width: 300px;
+}
+
+.text {
+  display: block;
+  font-family: "Rouge Script", cursive;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  min-width: 300px;
+  margin: 0;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: black;
+}
+
+.fsocial .fa {
   color: white;
-}
-.fa-whatsapp {
-  background: transparent;
-  color: white;
-}
-.fa-facebook {
-  background: transparent;
-  color: white;
-}
-.logo{
-  width: 30%;
-  height: 30%;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-.images{
-  width: 45%;
-  height: 45%;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 0;
 }

@@ -1,0 +1,28 @@
+p {
+  text-align: center;
+  font-family: "Scope One", serif;
+  font-variant: small-caps;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "Scope One", serif;
+  font-variant: small-caps;
+}
+
+th,
+td {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 800px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}

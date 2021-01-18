@@ -17,7 +17,7 @@ body {
 }
 
 header,
-nav,
+.mainNav,
 main,
 footer {
   max-width: 800px;
@@ -50,7 +50,7 @@ a:hover {
   color: black;
 }
 
-nav ul {
+.mainNav ul {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -64,37 +64,37 @@ nav ul {
   font-variant: small-caps;
 }
 
-nav ul li {
+.mainNav ul li {
   display: inline-block;
   padding: 5px 10px;
   min-width: 120px;
 }
 
-nav ul li:hover {
+.mainNav ul li:hover {
   background-color: transparent;
   border-style: none;
 }
 
-nav ul li a {
+.mainNav ul li a {
   color: black;
 }
 
-nav ul li:hover a {
+.mainNav ul li:hover a {
   color: #808080;
 }
 
-footer p {
+.mainFooter p {
   color: white;
   font-family: "NovatnyBold", serif;
   font-variant: small-caps;
   font-size: 12px;
 }
 
-footer span {
+.mainFooter span {
   font-family: "IM Fell French Canon SC", serif;
 }
 
-footer {
+.mainFooter {
   text-align: center;
 }
 

@@ -1,10 +1,10 @@
-p {
+.price {
   text-align: center;
   font-family: "Scope One", serif;
   font-variant: small-caps;
 }
 
-table {
+.services {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -13,8 +13,8 @@ table {
   font-variant: small-caps;
 }
 
-th,
-td {
+.services th,
+.services td {
   padding: 15px;
   font-size: 18px;
   text-align: center;
@@ -23,6 +23,6 @@ td {
   width: 800px;
 }
 
-tr:nth-child(even) {
+.services tr:nth-child(even) {
   background-color: #f2f2f2
 }

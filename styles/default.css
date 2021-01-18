@@ -119,12 +119,6 @@ a:hover {
   opacity: 0.7;
 }
 
-.logo {
-  display: inline-block;
-  height: 99px;
-  width: 300px;
-}
-
 .text {
   display: block;
   font-family: "Rouge Script", cursive;
@@ -133,7 +127,6 @@ a:hover {
   color: black;
   min-width: 300px;
   margin: 0;
-
 }
 
 .footer {
@@ -158,7 +151,6 @@ a:hover {
 
 .fsocial {
   display: flex;
-
 }
 
 .developer:last-child {
@@ -172,6 +164,45 @@ a:hover {
   font-family: arial;
   color: #2E7B3B;
   font-size: 8px;
-
   padding-top: 30px;
+}
+
+.head {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  height: 99px;
+  width: 300px;
+}
+
+.flags {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+
+.flag {
+  border: 1px solid black;
+  width: 30px;
+  height: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flag:hover {
+     opacity: 0.7;
+     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6), 0 4px 6px 0 rgba(0, 0, 0, 0.6);
 }

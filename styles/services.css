@@ -1,0 +1,28 @@
+.price {
+  text-align: center;
+  font-family: "Scope One", serif;
+  font-variant: small-caps;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: "Scope One", serif;
+  font-variant: small-caps;
+}
+
+.services th,
+.services td {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 800px;
+}
+
+.services tr:nth-child(even) {
+  background-color: #f2f2f2
+}

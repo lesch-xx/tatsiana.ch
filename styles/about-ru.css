@@ -1,0 +1,36 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 2px;
+}
+
+.aboutText {
+  margin: 0;
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-variant: small-caps;
+}
+
+.signature {
+  font-size: 20px;
+  font-family: "DrCarbfred", serif;
+  font-variant: small-caps;
+  text-align: right;
+}
+
+.aboutImage {
+  float: left;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutImage {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+  }
+}

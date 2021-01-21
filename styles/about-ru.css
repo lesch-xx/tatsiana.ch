@@ -27,6 +27,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+span {
+  font-size: 18px;
+  font-family: "Scope One", serif;
+  font-variant: small-caps;
+}
+
 @media only screen and (max-width: 600px) {
   .aboutImage {
     float: none;

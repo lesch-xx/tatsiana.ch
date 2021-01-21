@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "*Tatsiana Siliuk hairstylist web site*",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:visual": "percy snapshot _site/",
+    "test": "npm run test:visual"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lesch-xx/tatsiana.ch.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "lesch-xx",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lesch-xx/tatsiana.ch/issues"

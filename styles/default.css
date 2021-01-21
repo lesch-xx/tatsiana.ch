@@ -7,10 +7,6 @@
   font-family: "NovatnyBold";
   src: url("/fonts/NovatnyBold.woff2") format("woff2");
 }
-html,
-body {
-  height: 100%;
-}
 
 body {
   background-image: none;
@@ -18,14 +14,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 16px 0 0;
-  display: flex;
-  flex-direction: column;
-
 }
 
 header,
 .mainNav,
-main {
+main,
+footer {
   max-width: 800px;
   min-width: 320px;
   margin: 0 auto;
@@ -45,7 +39,6 @@ main {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 0 20px;
-  flex-grow: 1;
 }
 
 a {
